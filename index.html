@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique Exclusive | Produits Premium</title>
+    <!-- Google Fonts pour un look moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">MA BOUTIQUE</a>
+            <nav class="nav">
+                <a href="#accueil">Accueil</a>
+                <a href="#produits">Collections</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>L'Excellence à votre portée</h1>
+            <p>Découvrez notre sélection exclusive de produits de haute qualité.</p>
+            <a href="#produits" class="btn-primary">Voir la collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produits" class="products section">
+        <div class="container">
+            <h2 class="section-title">Nos Produits Phares</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Les produits seront injectés ici par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Nous Contacter</h2>
+            <div class="contact-info">
+                <p>Une question ? Besoin d'aide ?</p>
+                <a href="https://wa.me/0000000000" class="contact-link"><i class="fab fa-whatsapp"></i> +235 66 80 36 35</a>
+                <p class="note">Cliquez sur le numéro pour nous écrire directement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ma Boutique Exclusive. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Les articles du panier seront ici -->
+            <p class="empty-cart">Votre panier est vide.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">0 FCFA</span>
+            </div>
+            <button class="btn-primary btn-block" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
